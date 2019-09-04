@@ -1,6 +1,6 @@
 ## Sticky Twitch Stream Thing
 
-Creates a sticked post on subreddit when user is streaming live and removes it when not streaming.
+Creates a sticked post on subreddit when user is streaming live and removes it when not.
 
 ### Instructions
 
