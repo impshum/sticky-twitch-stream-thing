@@ -46,8 +46,14 @@ def find_stickiness():
             print('deleted')
 
 
+def get_id():
+    data = get(f'https://api.twitch.tv/helix/users?client_id={twitch_client_id}&user_id={target_user}').json()
+    return data.id
+
+
 def get_stream():
-    data = get(f'https://api.twitch.tv/kraken/streams/{target_user}?client_id={twitch_client_id}').json()
+    target_user_id = get_id()
+    data = get(f'https://api.twitch.tv/helix/streams/?client_id={twitch_client_id}&user_id={target_user_id}').json()
     if data['stream'] and data['stream']['stream_type'] == 'live':
         started = data['stream']['created_at'][11:-4]
         if started != start_time:
