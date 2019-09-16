@@ -14,7 +14,7 @@ target_sub = 'XXXX'
 
 reddit = praw.Reddit(client_id=client_id,
                      client_secret=client_secret,
-                     user_agent='Sticky Twitch Stream Thing (by /u/impshum)'',
+                     user_agent='Sticky Twitch Stream Thing (by /u/impshum)',
                      username=reddit_user,
                      password=reddit_pass)
 
