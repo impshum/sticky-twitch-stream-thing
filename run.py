@@ -48,7 +48,7 @@ def find_stickiness():
 
 def get_id():
     data = get(f'https://api.twitch.tv/helix/users?client_id={twitch_client_id}&user_id={target_user}').json()
-    return data.id
+    return data['data']['id']
 
 
 def get_stream():
